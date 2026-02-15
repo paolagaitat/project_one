@@ -1,0 +1,269 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: block;
+    width: 100%;
+}
+
+#root {
+    width: 100%;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* header */
+.header {
+    background: #fff;
+    border-bottom: 2px solid #ddd;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    color: #0b5fa5;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+}
+
+nav .btn {
+    background: #0b5fa5;
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 4px;
+}
+
+.hero {
+    height: 420px;
+    background: url("./assets/imagen1.jpg.jpeg") center/cover;
+    position: relative;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.0);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10%;
+}
+
+.hero h1 {
+    font-size: 42px;
+}
+
+.hero .btn {
+    margin-top: 15px;
+    background: #0b5fa5;
+    padding: 10px 20px;
+    color: #fff;
+    width: fit-content;
+    text-decoration: none;
+}
+
+.about {
+    width: 100%;
+    background: #fff;
+    color: #333;
+    padding: 60px 0;
+}
+
+.about h2 {
+    color: #0b5fa5;
+    margin-bottom: 30px;
+}
+
+.about-content {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-image {
+    flex: 0 0 40%;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* servicios */
+.services {
+    background:  #e7e7e7;
+    color: #000000;
+    padding: 60px 0;
+}
+
+.services h2{
+    text-align: center;
+    color: #0b5fa5;
+}
+.contact h2 {
+    text-align: center;
+    color: #f8f7f8;
+    margin: 0 0 10px 0;
+    padding-left: 80px;
+    position: relative;
+    text-align: left;
+}
+
+.divider {
+    height: 1px;
+    background: #ddd;
+    margin: 20px 0 40px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.service-card {
+    text-align: center;
+}
+
+/* contacto */
+.contact {
+    background: #0b5fa5;
+    color: #fff;
+    padding: 60px 0;
+}
+
+.contact-content {
+    display: flex;
+    gap: 40px;
+}
+
+.contact-form {
+    flex: 1;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    background: #fff;
+}
+
+.contact-form button {
+    background: #084a82;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-info p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.contact-info .icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+}
+
+.socials {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.socials a {
+    display: inline-block;
+}
+
+.socials img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+.socials a:hover img {
+    transform: scale(1.1);
+}
+
+.socials span {
+    display: inline-block;
+    margin-right: 10px;
+    background: #084a82;
+    padding: 8px 12px;
+    border-radius: 50%;
+}
+
+/* respon */
+@media (max-width: 900px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-content,
+    .contact-content {
+        flex-direction: column;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 500px) {
+    nav a {
+        margin-left: 10px;
+        font-size: 13px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
